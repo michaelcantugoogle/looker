@@ -14,11 +14,12 @@ view: names {
   dimension: names {
     type: string
     sql: ${TABLE}.names ;;
+    html: <p width=50 height=50> {{ value }} </p>  ;;
   }
 
   dimension: logo_image {
     sql: ${names} ;;
-    html: <img src="https://storage.googleapis.com/michaelcantu-demo-logos-bucket/{{ value }}.png" width=25 height=25 /> {{ value }} </img> ;;
+    html: <img src="https://storage.googleapis.com/michaelcantu-demo-logos-bucket/{{ value }}.png" width=50 height=50 /> {{ value }} </img> ;;
   }
 
   measure: count {
