@@ -2,6 +2,7 @@
   title: test
   layout: newspaper
   preferred_viewer: dashboards-next
+  description: ''
   preferred_slug: OP7wR4PQVdTv5g9gfg3lZ0
   elements:
   - title: test
@@ -48,7 +49,17 @@
     series_colors: {}
     defaults_version: 1
     listen: {}
+    row: 1
+    col: 0
+    width: 9
+    height: 7
+  - name: ''
+    type: text
+    title_text: ''
+    subtitle_text: ''
+    body_text: '[{"type":"p","children":[{"text":"Important Chart"}],"align":"center"}]'
+    rich_content_json: '{"format":"slate"}'
     row: 0
     col: 0
-    width: 24
-    height: 12
+    width: 4
+    height: 0
