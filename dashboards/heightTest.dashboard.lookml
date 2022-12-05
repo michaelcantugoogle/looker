@@ -52,7 +52,7 @@
     row: 1
     col: 0
     width: 9
-    height: 7
+    height: 0
   - name: ''
     type: text
     title_text: ''
