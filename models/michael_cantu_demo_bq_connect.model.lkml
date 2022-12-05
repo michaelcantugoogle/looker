@@ -27,3 +27,5 @@ persist_with: michael_cantu_demo_bq_connect_default_datagroup
 
 explore: baby_names_2017 {}
 explore: names {}
+
+include: "/dashboards/*.dashboard.lookml"
