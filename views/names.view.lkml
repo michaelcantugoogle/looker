@@ -14,12 +14,20 @@ view: names {
   dimension: names {
     type: string
     sql: ${TABLE}.names ;;
-    html: <p width=50 height=50> {{ value }} </p>  ;;
+    html: <p width=50 height=50 title="testing a hover text on cell value, the unique liquid variable is: {{ value }}"> {{ value }} </p>  ;;
   }
 
   dimension: logo_image {
     sql: ${names} ;;
     html: <img src="https://storage.googleapis.com/michaelcantu-demo-logos-bucket/{{ value }}.png" width=50 height=50 /> {{ value }} </img> ;;
+  }
+
+  dimension: names_buckets {
+    sql:
+    CASE
+      WHEN ${TABLE}.names = 'discord' THEN NULL
+    ELSE ${TABLE}.names
+    END ;;
   }
 
   measure: count {
