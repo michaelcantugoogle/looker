@@ -33,6 +33,12 @@ explore: wtanondataexampleresponses {
     relationship: many_to_one
     sql_on: ${wtanondataexampleresponses.userid} = ${wtanondataexampleusers.userid} ;;
   }
+  join: wtanonderivedtable {
+    from: wtanondataexampleusers
+    type: left_outer
+    relationship:one_to_one
+    sql_on: ${wtanondataexampleusers.office} = ${wtanonderivedtable.office} ;;
+  }
 }
 
 include: "/dashboards/*.dashboard.lookml"
