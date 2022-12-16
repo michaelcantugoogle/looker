@@ -27,5 +27,12 @@ persist_with: michael_cantu_demo_bq_connect_default_datagroup
 
 explore: baby_names_2017 {}
 explore: names {}
+explore: wtanondataexampleresponses {
+  join: wtanondataexampleusers {
+    type: left_outer
+    relationship: many_to_one
+    sql_on: ${wtanondataexampleresponses.userid} = ${wtanondataexampleusers.userid}.id} ;;
+  }
+}
 
 include: "/dashboards/*.dashboard.lookml"
