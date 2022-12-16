@@ -14,10 +14,7 @@ view: wtanonderivedtable {
       LEFT JOIN `michaelcantu-477-2022092313530.looker_central_demo_baby_names.wt-anon-data-example-users`
            AS wtanondataexampleusers ON wtanondataexampleresponses.userid = wtanondataexampleusers.userid
       GROUP BY
-          1,
-          2,
-          3,
-          4
+          1
       ;;
   }
    dimension: office {
