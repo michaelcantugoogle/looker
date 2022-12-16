@@ -19,7 +19,25 @@ view: wtanonderivedtable {
           3
       ;;
   }
+   dimension: office {
+     type: string
+     sql: ${TABLE}.office ;;
+   }
 
+  dimension: response_count {
+    type: number
+    sql: ${TABLE}.response_count ;;
+  }
+
+  dimension: average_response {
+    type: number
+    sql: ${TABLE}.average_response ;;
+  }
+
+  dimension: rule_1_flag {
+    type: number
+    sql: ${TABLE}.rule_1_flag ;;
+  }
   # # You can specify the table name if it's different from the view name:
   # sql_table_name: my_schema_name.tester ;;
   #
