@@ -31,7 +31,7 @@ explore: wtanondataexampleresponses {
   join: wtanondataexampleusers {
     type: left_outer
     relationship: many_to_one
-    sql_on: ${wtanondataexampleresponses.userid} = ${wtanondataexampleusers.userid}.id} ;;
+    sql_on: ${wtanondataexampleresponses.userid} = ${wtanondataexampleusers.userid} ;;
   }
 }
 
