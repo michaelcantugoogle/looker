@@ -27,6 +27,12 @@ view: wtanondataexampleusers {
     sql: ${TABLE}.userid ;;
   }
 
+  dimension: officeid {
+    type: number
+    value_format_name: id
+    sql: ${TABLE}.officeid ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [name]
