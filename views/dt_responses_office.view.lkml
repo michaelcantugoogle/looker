@@ -1,6 +1,7 @@
 view: dt_responses_office {
   derived_table: {
     sql: SELECT
+          wtanondataexampleusers.officeid AS wtanondataexampleusers_officeid,
           wtanondataexampleusers.office  AS wtanondataexampleusers_office,
           wtanondataexampleresponses.category  AS wtanondataexampleresponses_category,
           wtanondataexampleresponses.queston  AS wtanondataexampleresponses_queston,
@@ -13,7 +14,8 @@ view: dt_responses_office {
       GROUP BY
           1,
           2,
-          3
+          3,
+          4
       LIMIT 30000
        ;;
   }
@@ -26,6 +28,12 @@ view: dt_responses_office {
   dimension: wtanondataexampleusers_office {
     type: string
     sql: ${TABLE}.wtanondataexampleusers_office ;;
+  }
+
+  dimension: wtanondataexampleusers_officeid {
+    type: number
+    value_format_name: id
+    sql: ${TABLE}.wtanondataexampleusers_officeid ;;
   }
 
   dimension: wtanondataexampleresponses_category {
