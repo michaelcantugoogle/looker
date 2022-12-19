@@ -34,10 +34,9 @@ explore: wtanondataexampleresponses {
     sql_on: ${wtanondataexampleresponses.userid} = ${wtanondataexampleusers.userid} ;;
   }
   join: dt_responses_office {
-    from: wtanondataexampleusers
     type: left_outer
     relationship:many_to_one
-    sql_on: ${wtanondataexampleusers.officeid} = ${dt_responses_office.officeid} ;;
+    sql_on: ${wtanondataexampleusers.officeid} = ${dt_responses_office.wtanondataexampleusers_officeid} ;;
   }
 }
 explore: dt_responses_office {}
