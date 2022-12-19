@@ -36,7 +36,7 @@ explore: wtanondataexampleresponses {
   join: dt_responses_office {
     from: wtanondataexampleusers
     type: left_outer
-    relationship:one_to_one
+    relationship:many_to_one
     sql_on: ${wtanondataexampleusers.officeid} = ${dt_responses_office.officeid} ;;
   }
 }
