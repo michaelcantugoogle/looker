@@ -33,11 +33,11 @@ explore: wtanondataexampleresponses {
     relationship: many_to_one
     sql_on: ${wtanondataexampleresponses.userid} = ${wtanondataexampleusers.userid} ;;
   }
-  join: wtanonderivedtable {
+  join: dt_responses_office {
     from: wtanondataexampleusers
     type: left_outer
-    relationship:many_to_one
-    sql_on: ${wtanondataexampleusers.office} = ${wtanonderivedtable.office} ;;
+    relationship:one_to_one
+    sql_on: ${wtanondataexampleusers.officeid} = ${dt_responses_office.officeid} ;;
   }
 }
 explore: dt_responses_office {}
