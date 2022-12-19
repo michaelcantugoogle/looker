@@ -40,5 +40,6 @@ explore: wtanondataexampleresponses {
     sql_on: ${wtanondataexampleusers.office} = ${wtanonderivedtable.office} ;;
   }
 }
+explore: dt_responses_office {}
 
 include: "/dashboards/*.dashboard.lookml"
