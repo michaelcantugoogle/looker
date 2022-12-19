@@ -20,6 +20,12 @@ view: dt_responses_office {
        ;;
   }
 
+  measure: rule_one {
+    description: "Is count of responses per office <5 ?"
+    type: yesno
+    sql: ${wtanondataexampleresponses_count} < 5 ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [detail*]
